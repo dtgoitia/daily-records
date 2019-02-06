@@ -1,6 +1,6 @@
 <template>
   <div class="day">
-    <p class="title">{{ getDate() }}</p>
+    <DayDate v-bind:date="data.date" />
     <div class="record-container">
       <RecordItem v-for="(value, key, index) in data.record"
         :name="key" :checked="value"
@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import DayDate from "./DayDate.vue";
 import RecordItem from "./RecordItem.vue";
 
 export default {
@@ -21,24 +22,19 @@ export default {
     showLabels: Boolean,
   },
   methods: {
-    getDate(){
-      return this.data.date;
-    },
     toggleCheck(name){
       this.data.record[name] = !this.data.record[name]
     },
   },
   components: {
-    RecordItem
+    DayDate,
+    RecordItem,
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.title {
-  font-weight: 700;
-}
 .record-container {
   align-items: center;
   display: flex;
