@@ -1,12 +1,12 @@
 <template>
   <div class="day">
-    <p class="title">{{ title }}</p>
-    <p>Record: {{ JSON.stringify(record) }}</p>
+    <p class="title">{{ getDate() }}</p>
     <div class="record-container">
-      <RecordItem v-for="(value, key, index) in record"
+      <RecordItem v-for="(value, key, index) in data.record"
         :name="key" :checked="value"
-        :toggleCheck="toggleChecker(record, key)"
-        :key="`${index}-${key}`"/>
+        :key="`${index}-${key}`"
+        v-on:toggle-check="toggleCheck"
+        :showLabels="showLabels" />
     </div>
   </div>
 </template>
@@ -17,20 +17,15 @@ import RecordItem from "./RecordItem.vue";
 export default {
   name: 'Day',
   props: {
-    title: String,
-    record: Object,
-  },
-  data() {
-    return {
-      message: 'blah',
-      checked: false
-    }
+    data: Object,
+    showLabels: Boolean,
   },
   methods: {
-    toggleChecker(record, key){
-      return function(newValue) {
-        this.record[key] = newValue;
-      };
+    getDate(){
+      return this.data.date;
+    },
+    toggleCheck(name){
+      this.data.record[name] = !this.data.record[name]
     },
   },
   components: {
@@ -45,17 +40,10 @@ export default {
   font-weight: 700;
 }
 .record-container {
-  align-items: center;  
+  align-items: center;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-}
-.record-item {
-  align-self: center;
-  border: 1px solid black;
-  height: 3em;
-  width: 3em;
-  margin: 0.5em;
 }
 </style>
