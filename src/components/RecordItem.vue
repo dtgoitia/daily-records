@@ -36,8 +36,7 @@ export default {
   flex-wrap: nowrap;
   justify-content: flex-start;
 
-  border: 1px solid rgb(226, 226, 226);
-  margin: 0.5em;
+  /* border: 1px solid rgb(226, 226, 226); */
   width: 100%;
 }
 .square {
@@ -46,9 +45,14 @@ export default {
   height: 3em;
   width: 3em;
   margin: 0.5em;
-  background-color: rgba(150, 0, 150, 0.5)
+  background-color: rgb(150, 0, 150);
+  opacity: 0.1;
 }
 .checked {
-  background-color: #8f8f8f;
+  background-color: #d3d3d3;
+  /* opacity: 1; */
+}
+.label {
+  padding-right: 1em;
 }
 </style>

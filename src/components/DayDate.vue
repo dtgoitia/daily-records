@@ -34,5 +34,6 @@ export default {
 }
 .date {
   font-weight: 700;
+  max-width: 4em;
 }
 </style>

@@ -34,7 +34,33 @@ export default {
           }
         },
         {
-          date: '2019-02-06T20:06:27.827Z',
+          date: '2019-02-07T20:06:27.827Z',
+          record: {
+            backPain: false,
+            allergy: false,
+            irritatedEyes: false,
+            mugs: false,
+            phlegm: false,
+            throatPain: false,
+            soreness: false,
+            sternumPain: false,
+          }
+        },
+        {
+          date: '2019-02-08T20:06:27.827Z',
+          record: {
+            backPain: false,
+            allergy: false,
+            irritatedEyes: false,
+            mugs: false,
+            phlegm: false,
+            throatPain: false,
+            soreness: false,
+            sternumPain: false,
+          }
+        },
+        {
+          date: '2019-02-09T20:06:27.827Z',
           record: {
             backPain: false,
             allergy: false,
