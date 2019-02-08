@@ -26,7 +26,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .record-item {
   align-items: center;
@@ -36,12 +35,12 @@ export default {
   flex-wrap: nowrap;
   justify-content: flex-start;
 
-  /* border: 1px solid rgb(226, 226, 226); */
   width: 100%;
 }
 .square {
   align-self: center;
   border: 1px solid black;
+  border-radius: .3em;
   height: 3em;
   width: 3em;
   margin: 0.5em;
@@ -50,7 +49,6 @@ export default {
 }
 .checked {
   background-color: #d3d3d3;
-  /* opacity: 1; */
 }
 .label {
   padding-right: 1em;

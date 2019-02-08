@@ -1,8 +1,8 @@
 <template>
   <div class="day">
-    <DayDate v-bind:date="data.date" />
+    <DayDate v-bind:date="dayData.date" />
     <div class="record-container">
-      <RecordItem v-for="(value, key, index) in data.record"
+      <RecordItem v-for="(value, key, index) in dayData.record"
         :name="key" :checked="value"
         :key="`${index}-${key}`"
         v-on:toggle-check="toggleCheck"
@@ -18,12 +18,12 @@ import RecordItem from "./RecordItem.vue";
 export default {
   name: 'Day',
   props: {
-    data: Object,
+    dayData: Object,
     showLabels: Boolean,
   },
   methods: {
     toggleCheck(name){
-      this.data.record[name] = !this.data.record[name]
+      this.dayData.record[name] = !this.dayData.record[name]
     },
   },
   components: {
@@ -33,7 +33,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .record-container {
   align-items: center;

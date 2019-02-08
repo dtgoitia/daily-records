@@ -19,7 +19,7 @@ export default {
   },
   methods: {
     getMonth() { return this.months[this.currentDate.getMonth()]; },
-    getDay() { return this.currentDate.getDay(); },
+    getDay() { return this.currentDate.getDate(); },
   },
 }
 </script>
