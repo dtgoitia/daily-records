@@ -39,8 +39,6 @@ export default {
   },
   methods: {
     addDay(date) {
-      /* eslint-disable */
-      console.log(`adding a day: ${date}`);
       const cleanDayRecord = {
         date: date.toISOString(),
         record: {
@@ -62,7 +60,6 @@ export default {
       let lastRecordDateDirty = new Date(Date.parse(this.records[this.records.length - 1].date));
       let lastRecordDate = this.sanitizeDate(lastRecordDateDirty);
       while (lastRecordDate < today) {
-        const missingRecords = (today - lastRecordDate) / millisecondsPerDay;  // difference in milliseconds
         const nextDay = this.nextDay(lastRecordDate);
         const nextDaySanitized = this.sanitizeDate(nextDay)
         this.addDay(nextDaySanitized);
@@ -108,7 +105,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin: 0.5em;
+  margin: 0.5rem;
 }
 
 .days {

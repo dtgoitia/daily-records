@@ -27,13 +27,13 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .day {
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 .month {
-  font-size: 1.1em;
+  font-size: 1.1rem;
 }
 .date {
   font-weight: 700;
-  max-width: 4em;
+  max-width: 4rem;
 }
 </style>

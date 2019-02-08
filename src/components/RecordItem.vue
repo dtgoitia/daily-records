@@ -40,10 +40,10 @@ export default {
 .square {
   align-self: center;
   border: 1px solid black;
-  border-radius: .3em;
-  height: 3em;
-  width: 3em;
-  margin: 0.5em;
+  border-radius: .3rem;
+  height: 3rem;
+  width: 3rem;
+  margin: 0.5rem;
   background-color: rgb(150, 0, 150);
   opacity: 0.1;
 }
@@ -51,6 +51,6 @@ export default {
   background-color: #d3d3d3;
 }
 .label {
-  padding-right: 1em;
+  padding-right: 1rem;
 }
 </style>
