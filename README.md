@@ -25,5 +25,11 @@ npm run test
 npm run lint
 ```
 
+### Publish to GitHub
+```
+npm run publish
+```
+Build project to `dist/` folder and publish files in `dist/` to the `gh-pages` remote branch.
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
