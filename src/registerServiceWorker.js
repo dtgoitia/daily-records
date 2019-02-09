@@ -6,7 +6,6 @@ if (process.env.NODE_ENV === 'production') {
   const baseUrl = process.env.NODE_ENV === 'production'
     ? '/daily-records/'
     : '/';
-  console.log(`base url = ${baseUrl}`);
   register(`${baseUrl}service-worker.js`, {
     ready () {
       console.log(

@@ -1,6 +1,6 @@
 <template>
   <div id="app" @click="updateLocalStorage">
-    <p>Amount of records: {{ records.length }}</p>
+    <Push />
     <div class="days">
       <Day v-for="(dayData, index) in records" :key="dayData.date"
         :dayData="dayData"
@@ -11,6 +11,7 @@
 
 <script>
 import Day from './components/Day.vue'
+import Push from './components/Push.vue'
 
 const millisecondsPerDay = 86400000;
 
@@ -94,6 +95,7 @@ export default {
   },
   components: {
     Day,
+    Push,
   }
 }
 </script>
