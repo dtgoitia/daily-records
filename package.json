@@ -7,7 +7,9 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "start": "npm run serve",
-    "publish": "git subtree push --prefix dist/ origin gh-pages"
+    "publish": "git subtree push --prefix dist/ origin gh-pages",
+    "delete-gh-pages": "git push -f -d origin gh-pages",
+    "publish-force": "npm run delete-gh-pages && npm run publish"
   },
   "dependencies": {
     "register-service-worker": "^1.5.2",
