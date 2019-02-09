@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/daily-records/precache-manifest.6df94d58b34cad823147ee8dc90d5bab.js"
+  "/daily-records/precache-manifest.684875f92f21a36452fd2e69e19b3196.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "daily-records"});
